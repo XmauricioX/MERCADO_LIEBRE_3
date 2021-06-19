@@ -7,7 +7,7 @@
     --Gris-claro: #ebebeb;
     --Verde: #39b54a;
     /* TIPOGRAFIAS */
-    --Roboto: @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+    --Roboto: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
     /* TAMAÑO DE TIPOGRAFIAS */
     --cuerpos-de-texto: 12px;
     --oferta: 24px;
@@ -15,18 +15,20 @@
     --descuentos: 16px;
     --descripciones: 16px;
 }
-body{
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-
+}
+body{
     background-color: var(--Gris-claro);
     font-family: var(--Roboto);
 }
+
+/* HEADER */
+
 header{
     background-color: var(--Amarillo);
-}
-section{
-    background-color: white;
 }
 header nav ul li a{
     text-decoration: none;
@@ -49,15 +51,43 @@ header nav ul{
     border-radius: 5px;
 }
 
+
+/* MAIN */
+main{
+    width: 100%;
+}
+
 main section{
     margin: 0;
     padding: 0;
     margin: 0px 15px;
 }
-main section article h3{
-    margin: 0;
+main section article{
+    margin: 10px;
+    padding: 15px;
+    border-top: 1px solid #ebebeb;
+    background-color: white;
 }
 
+main section article img{
+    width: 100%;
+}
+main section article h3{
+    margin: 0;
+    color: var(--Gris-oscuro);
+}
+main section article i{
+    color: var(--Verde);
+}
+.oferta{
+    color: var(--Verde);
+}
+.titulo-sections{
+    color: var(--Gris-oscuro);
+}
+
+
+/* FOOTER */
 footer{
     margin: 0px 3px;
     margin-top: 10px;
@@ -65,6 +95,7 @@ footer{
 }
 footer section{
     padding-top: 20px;
+    background-color: white;
 }
 footer article i{
     font-size: 2em;
